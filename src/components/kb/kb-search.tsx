@@ -181,7 +181,7 @@ export function KBSearch() {
               base.
             </DialogDescription>
           </DialogHeader>
-          <div className="rounded-lg border-2 border-dashed border-border bg-muted/30 p-8 text-center">
+          <div className="rounded-lg border-2 border-dashed border-border bg-muted/30 p-8 text-center opacity-50">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="32"
@@ -205,7 +205,10 @@ export function KBSearch() {
               .md, .txt, .pdf (max 10MB)
             </p>
           </div>
-          <DialogFooter showCloseButton>
+          <p className="text-xs text-muted-foreground text-center">
+            Upload is disabled for this demo.
+          </p>
+          <DialogFooter>
             <Button variant="outline" onClick={() => setUploadOpen(false)}>
               Close
             </Button>

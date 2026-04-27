@@ -163,6 +163,8 @@ Enterprise customers need trust signals. Low similarity scores warn users that t
 | Variable | Description | Required |
 |----------|-------------|----------|
 | `AI_GATEWAY_API_KEY` | Vercel AI Gateway API key (routes to OpenAI, Anthropic, etc.) | Yes |
+| `BASIC_AUTH_USERNAME` | Username for HTTP Basic Auth (omit to disable auth) | No |
+| `BASIC_AUTH_PASSWORD` | Password for HTTP Basic Auth (omit to disable auth) | No |
 
 ## License
 
