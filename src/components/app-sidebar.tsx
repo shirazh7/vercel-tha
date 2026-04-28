@@ -1,5 +1,13 @@
 "use client";
 
+// The sidebar is always visible on desktop (no collapse toggle) to reinforce
+// the enterprise dashboard feel and keep KB documents one click away. On
+// mobile it's an overlay with a backdrop — controlled by the parent layout's
+// state rather than internal state, so the topbar hamburger can open it.
+// KB documents are listed directly in the sidebar (not behind a sub-route)
+// because quick access to source documents is a key differentiator for a
+// knowledge assistant — users should see what's available at a glance.
+
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { useState } from "react";

@@ -1,3 +1,7 @@
+// Centralised doc metadata avoids reading the filesystem on the client.
+// The sidebar, KB index, and KB detail page all reference this array
+// rather than duplicating titles and descriptions. Slugs match filenames
+// in src/data/docs/ by convention so loadDocumentBySlug works without a lookup table.
 export const KNOWLEDGE_BASE_DOCS = [
   {
     slug: "deployment-runbook",

@@ -1,5 +1,11 @@
 "use client";
 
+// Messages are rendered as full markdown via ReactMarkdown with citation
+// injection at the paragraph level. An earlier approach split text on \n\n
+// to insert citation buttons, but that broke fenced code blocks containing
+// blank lines. The current design intercepts <p> and <li> components to
+// parse [1], [2] patterns into clickable buttons without fragmenting markdown.
+
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import type { Components } from "react-markdown";

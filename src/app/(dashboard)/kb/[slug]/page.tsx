@@ -1,3 +1,9 @@
+// This is a Server Component — document content is read from the filesystem
+// at request time (not bundled into the client). This keeps the client bundle
+// small and means the raw markdown never needs to be sent as JSON over an API.
+// The "Ask about this" button links to /chat?q=... which pre-fills the chat
+// input, bridging the read → ask workflow that enterprise users expect.
+
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { loadDocumentBySlug } from "@/lib/rag/documents";

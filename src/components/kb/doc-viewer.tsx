@@ -1,5 +1,12 @@
 "use client";
 
+// Custom markdown components ensure consistent, readable styling that matches
+// the app's design system. ReactMarkdown + remark-gfm was chosen over raw
+// dangerouslySetInnerHTML to prevent XSS from user-uploaded documents (even
+// though current docs are static, this is the right pattern for production).
+// The same component is reused for KB document viewing and could be shared
+// with message rendering, but message-bubble has citation-specific overrides.
+
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import type { Components } from "react-markdown";

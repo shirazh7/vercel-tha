@@ -1,5 +1,11 @@
 "use client";
 
+// Chat state is managed via useChat with DefaultChatTransport rather than a
+// manual fetch loop. This gives us streaming, optimistic UI updates, and
+// automatic message reconciliation for free. Manual input state (useState)
+// is used instead of useChat's built-in input/handleInputChange because we
+// need to pre-fill from URL query params (?q=) when navigating from the KB.
+
 import { useChat } from "@ai-sdk/react";
 import { DefaultChatTransport } from "ai";
 import { useState, useRef, useEffect, useCallback, useMemo } from "react";

@@ -1,5 +1,10 @@
 "use client";
 
+// Error boundary at the route group level catches rendering failures in any
+// dashboard page without crashing the entire app. The digest ID is shown
+// so users can reference it in support tickets — in production this would
+// correlate with Sentry/OTEL traces for fast triage.
+
 import { useEffect } from "react";
 import { Button } from "@/components/ui/button";
 

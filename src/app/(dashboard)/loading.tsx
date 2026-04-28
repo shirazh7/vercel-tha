@@ -1,3 +1,6 @@
+// Skeleton loading state prevents layout shift during route transitions.
+// Next.js renders this automatically when navigating between dashboard pages
+// while the target page's data is being fetched (e.g., KB document reads).
 import { Skeleton } from "@/components/ui/skeleton";
 
 export default function DashboardLoading() {

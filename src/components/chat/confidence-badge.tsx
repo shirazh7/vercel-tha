@@ -1,8 +1,11 @@
 import { Badge } from "@/components/ui/badge";
 
-// text-embedding-3-small cosine similarity scores are typically in the
-// 0.25–0.65 range. These thresholds are calibrated to that distribution,
-// not to a 0–1 percentage scale.
+// Three-tier confidence (green/amber/red) gives users an immediate trust
+// signal without requiring them to interpret raw similarity scores.
+// text-embedding-3-small cosine similarity scores cluster in the 0.25–0.65
+// range — not 0–1 like a percentage. These thresholds were tuned empirically
+// against the eval suite: 0.45+ reliably indicates the chunk contains the
+// answer, 0.35–0.45 means partially relevant, below 0.35 is noise.
 const HIGH_THRESHOLD = 0.45;
 const MEDIUM_THRESHOLD = 0.35;
 

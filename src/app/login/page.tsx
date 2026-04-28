@@ -1,5 +1,10 @@
 "use client";
 
+// Custom login page instead of the browser's native Basic Auth dialog.
+// The native dialog is ugly, can't be styled, and signals "dev tool" rather
+// than "enterprise product". Cookie-based auth (set by /api/auth/login)
+// keeps the UX clean — the middleware checks for the cookie on every request.
+
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";

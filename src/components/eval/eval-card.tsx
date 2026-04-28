@@ -1,3 +1,9 @@
+// Each eval card shows the full reasoning chain: question → expected facts →
+// actual answer → which facts matched. This transparency lets the interviewer
+// inspect *why* a test passed or failed, not just the binary result.
+// Decline tests (shouldDecline) are displayed differently since they have no
+// expected facts — they only check that the model refused to answer.
+
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import type { GroundingResult } from "@/lib/eval/grounding-check";

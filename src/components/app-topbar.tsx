@@ -1,5 +1,9 @@
 "use client";
 
+// Slim top bar shows the current page title derived from the pathname.
+// This avoids passing title props through layout → page → topbar and
+// keeps routing as the single source of truth for navigation state.
+
 import { usePathname } from "next/navigation";
 
 const PAGE_TITLES: Record<string, string> = {
